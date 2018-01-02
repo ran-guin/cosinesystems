@@ -63,7 +63,7 @@ export default {
       icons: { Staff: 'user', 'Mail': 'mail' },
       LH: "<img src='/static/images/cosine.logo.png' />",
       block_content: {Staff: 'our staff'},
-      active_block: 'staff'
+      active_block: 'us'
     }
   },
   computed: {
@@ -90,11 +90,11 @@ export default {
 
 /*** Customize Header / Footer Settings: ***/
 $header-height: 160px;
-$header-background-colour: #6ac;
+$header-background-colour: #fff;
 $header-padding: 10px 30px;
 
 $subheader-height: 50px;
-$subheader-background-colour: #fff;
+$subheader-background-colour: #6ac;
 
 $footer-height: 70px;
 $footer-colour: black;
