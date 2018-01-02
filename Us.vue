@@ -31,10 +31,10 @@ export default {
   data () {
     return {
       skills: [
-        {icon: 'signal', name: 'Data Management', list: ['Database Design', 'Data Standardization', 'Streamlining Data Entry', 'Data Mining', 'Data Storage']},
-        {icon: 'eye', name: 'Data Visualization', description: 'Generating simple ways to visualize data effectively', list: ['Dynamic Graphs', 'Reports', 'Annotated Maps']},
-        {icon: 'desktop', name: 'Web Sites', description: 'We can also develop responsive web sites for collaborators that may include data interface and visualization features'},
-        {icon: 'globe', name: 'Web Applications', description: 'We can also develop more comprehensive web applications that perform more detailed data handling and visualization'}
+        {icon: 'desktop', name: 'Web Sites', description: 'We can develop customized single-page or multi-page web sites that effectively communicate who you are and what you have to offer'},
+        {icon: 'globe', name: 'Web Applications', description: 'We can also develop more comprehensive web applications with personalized user login features, a database backend, and customized data handling and visualization'},
+        {icon: 'signal', name: 'Data Management', list: ['Database Design', 'Data Standardization', 'Streamlining Data Entry', 'Data Mining', 'Data Storage', 'REST API development']},
+        {icon: 'eye', name: 'Data Visualization', description: 'Generating simple ways to visualize data effectively', list: ['Dynamic Graphs / Bar Charts', 'Annotated Data Maps', 'Excel/PDF Reports']}
       ],
 
       tools: [
