@@ -1,16 +1,27 @@
 <template lang='pug'>
   div.page
     div.header
-      <!-- img.bg -->
-      PublicHeader(left='Cosine Systems' right='Admin' centre='Cosine Systems')
+      PublicHeader()
     div.subheader.overlay
-      CustomMenu(:links='links' type='url')
+      CustomMenu(:links='links' type='function' :onClick="activate" :active="active_block")
     div.body.container
-      <!-- img.bg -->
-      div.overlay
-        Block(content="main block content...")
+      div
+        span(v-if="active_block==='staff'")
+          Staff()
+        span(v-else-if="active_block==='mission'")
+          Mission()
+        span(v-else-if="active_block==='contact'")
+          Contact()
+        span(v-else-if="active_block==='us'")
+          Us()
+        span(v-else-if="active_block==='projects'")
+          Projects()
+        <!-- span(v-else-if="active_block==='tools'")
+          Tools() -->
+        span(v-else)
+          h3 {{active_block}} ?
     div.footer.overlay
-      PublicFooter(left="left" centre="<h3>centre</h3>" right="right")
+      PublicFooter()
 
 </template>
 
@@ -18,23 +29,52 @@
 import PublicHeader from './../PublicHeader'
 import PublicFooter from './../PublicFooter'
 import CustomMenu from './../Standard/Menu'
+
 import Block from './../Standard/Block'
+import Staff from './Staff'
+import Mission from './Mission'
+import Contact from './Contact'
+import Us from './Us'
+import Projects from './Projects'
 
 export default {
-  name: 'Home',
+  name: 'hello',
   components: {
     PublicHeader,
+    PublicFooter,
     CustomMenu,
     Block,
-    PublicFooter
+    Staff,
+    Mission,
+    Contact,
+    Us,
+    Projects
+    // Tools
   },
   data () {
     return {
-      links: ['About Us', 'Projects', 'Contact Us'],
-      msg: 'Welcome to My Vue.js App'
       // ################## Add Link List Below for Testing ######################
+      links: [{'Mission': 'mission'}, {Staff: 'staff'}, {'Expertise': 'us'}, {Projects: 'projects'}, {Contact: 'contact'}],
+      icons: { Staff: 'user', 'Mail': 'mail' },
+      active_block: 'us'
+    }
+  },
+  computed: {
+    content: function () {
+      if (this.block_content && this.block_content[this.active_block]) {
+        return this.block_content[this.active_block]
+      } else {
+        return this.active_block + 'content...'
+      }
+    }
+  },
+  methods: {
+    activate (layer) {
+      console.log('activate ' + layer)
+      this.active_block = layer
     }
   }
+
 }
 </script>
 
@@ -42,16 +82,16 @@ export default {
 <style lang="sass?outputStyle=expanded">
 
 /*** Customize Header / Footer Settings: ***/
-$header-height: 80px;
-$header-background-colour: #999;
+$header-height: 160px;
+$header-background-colour: #fff;
 $header-padding: 10px 30px;
 
 $subheader-height: 50px;
-$subheader-background-colour: transparent;
+$subheader-background-colour: #6ac;
 
-$footer-height: 90px;
+$footer-height: 70px;
 $footer-colour: black;
-$footer-background-colour: #ccc;
+$footer-background-colour: #6ac;
 
 $body-colour: black;
 
@@ -65,7 +105,7 @@ $body-colour: black;
   height: $header-height;
   background-color: $header-background-colour;
   padding: $header-padding;
-
+  border-bottom: solid black 1px;
 }
 .footer {
   background-color: $footer-background-colour;
@@ -92,18 +132,19 @@ $body-colour: black;
   min-height: calc(100vh - #{$header-height} - #{$footer-height});
   color: $body-colour;
   z-index: 10000;
+  border-top: black 1px;
 }
 
 img.bg {
   z-index: -1;
   /* Set rules to fill background */
-  min-height: 200px;
+  min-height: 100%;
   /*min-width: 1024px;*/
-  background-image: url('/static/images/cosine.logo.png');
+  /*background-image: url("/static/images/teapour.jpeg");*/
 /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
-  /*background-size: cover;*/
+  background-size: cover;
 
   /*background-color: rgba(255, 255, 0, 0.3);*/
 
@@ -116,8 +157,7 @@ img.bg {
   
   /* Set up positioning */
   position: fixed;
-  /*top: calc(#{$header-height});*/
-  top: 0px;
+  top: calc(#{$header-height});
   left: 0;
 }
 
@@ -140,4 +180,14 @@ img.bg {
     text-align: center;
     margin:0 auto;
 }
+
+img.logo {
+  max-height: 140px;
+}
+
+a {
+  color: black !important;
+}
+
+
 </style>
