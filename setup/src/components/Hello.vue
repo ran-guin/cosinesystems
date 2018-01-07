@@ -27,7 +27,6 @@
 </template>
 
 <script>
-// import config from './../config.js'
 import PublicHeader from './PublicHeader'
 import PublicFooter from './PublicFooter'
 import CustomMenu from './Standard/Menu'
@@ -38,7 +37,6 @@ import Mission from './cosine/Mission'
 import Contact from './cosine/Contact'
 import Us from './cosine/Us'
 import Projects from './cosine/Projects'
-// import Tools from './cosine/Tools'
 
 export default {
   name: 'hello',
@@ -56,13 +54,9 @@ export default {
   },
   data () {
     return {
-      msg: 'Welcome to My Vue.js App',
       // ################## Add Link List Below for Testing ######################
-      // links: ['Mission', 'Staff', 'What We Do', 'Active Projects', 'Tools', 'Mail'],
       links: [{'Mission': 'mission'}, {Staff: 'staff'}, {'Expertise': 'us'}, {Contact: 'contact'}, {Projects: 'projects'}],
       icons: { Staff: 'user', 'Mail': 'mail' },
-      LH: "<img src='/static/images/cosine.logo.png' />",
-      block_content: {Staff: 'our staff'},
       active_block: 'us'
     }
   },

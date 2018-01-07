@@ -1,14 +1,10 @@
-<!--       button.btn.btn-default(v-if='login')
-        router-link(:to="{name: 'Login'}") Log In 
- -->
 <template lang='pug'>
   div.publicHeader
-    span.navbar-left
+    span.navbar-left(v-html='left')
+    span.navbar-centre()
       img.logo(src='/static/images/cosine.logo.png') 
-    span.navbar-centre(v-if="centre" v-html="centre")
-      span &nbsp;
     span.navbar-right
-      span(v-if='right' v-html="right")
+      span(v-html="right")
  
       span &nbsp; &nbsp;
  </template>
@@ -18,10 +14,12 @@
 export default {
   props: {
     left: {
-      type: String
+      type: String,
+      default: ''
     },
     right: {
-      type: String
+      type: String,
+      default: ''
     },
     centre: {
       type: String,
