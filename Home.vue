@@ -15,16 +15,13 @@
 </template>
 
 <script>
-import config from '@/config.js'
 import PublicHeader from './../PublicHeader'
 import PublicFooter from './../PublicFooter'
 import CustomMenu from './../Standard/Menu'
 import Block from './../Standard/Block'
 
-var links = config.complexLinks || ['About Us', 'Projects', 'Contact Us']// [{name: 'About Us', url: ''}, {name: 'Contact Us', url: 'mailto:'}]
-
 export default {
-  name: 'hello',
+  name: 'Home',
   components: {
     PublicHeader,
     CustomMenu,
@@ -33,7 +30,7 @@ export default {
   },
   data () {
     return {
-      links: links,
+      links: ['About Us', 'Projects', 'Contact Us'],
       msg: 'Welcome to My Vue.js App'
       // ################## Add Link List Below for Testing ######################
     }
