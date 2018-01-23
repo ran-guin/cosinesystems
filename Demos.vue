@@ -4,8 +4,11 @@
     p &nbsp;
     ul
       li.col-md-2(v-for="link in links")
-        router-link(:to="{name: link.name}" target="_blank")
-          link(href='/images/icons/cosine.ico' rel='icon')
+        a(v-if='link.url' :href='link.url')
+          h4(data-tooltip :title='link.description') {{link.name}}
+          br
+          img(:src="link.img" height='40px')        
+        router-link(v-else :to="{name: link.name}" target="_blank")
           h4(data-tooltip :title='link.description') {{link.name}}
           br
           img(:src="link.img" height='40px')
@@ -24,7 +27,7 @@ export default {
         {name: 'Ovid', img: '/static/images/needleIcon.png', description: 'Online Vaccination & Immunization Databse'},
         {name: 'Sparc', img: '/static/images/cvenn.gif', description: 'Social Platform Affecting Real Connections'},
         {name: 'T4U', img: '/static/images/teacup.png', description: 'Sample Online Retail Website'},
-        {name: 'LITMUS', img: '/static/images/litmus.png', description: 'Laboratory Information Management System'}
+        {name: 'LITMUS', img: '/static/images/litmus.png', description: 'Laboratory Information Management System', url: 'http://litmus-a1.herokuapp.com/'}
       ]
     }
   }
