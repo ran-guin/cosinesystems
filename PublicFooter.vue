@@ -58,9 +58,10 @@ export default {
   }
 
   span a {
-    color: #eee;
+    color: #222;
   }
   span a:hover {
-    color: white;
+    color: #000;
+    font-weight: bold;
   }
 </style>
