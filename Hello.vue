@@ -93,11 +93,11 @@ $header-background-colour: #fff;
 $header-padding: 10px 30px;
 
 $subheader-height: 50px;
-$subheader-background-colour: #6ac;
+$subheader-background-colour: #39a;
 
 $footer-height: 70px;
 $footer-colour: black;
-$footer-background-colour: #6ac;
+$footer-background-colour: #39a;
 
 $body-colour: black;
 
