@@ -20,6 +20,7 @@ export default {
         '/static/images/angular.png',
         '/static/images/react.png',
         '/static/images/vue.png',
+        '/static/images/adonis.jpg',
         '/static/images/d3t.jpg'
       ]
     }

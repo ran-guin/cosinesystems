@@ -1,16 +1,11 @@
 <template lang='pug'>
   div.page
-    div.header
-      <!-- img.bg -->
-      PublicHeader(left='Cosine Systems' right='Admin' centre='Cosine Systems')
     div.subheader.overlay
       CustomMenu(:links='links' type='url')
     div.body.container
       <!-- img.bg -->
       div.overlay
         Block(content="main block content...")
-    div.footer.overlay
-      PublicFooter(left="left" centre="<h3>centre</h3>" right="right")
 
 </template>
 
