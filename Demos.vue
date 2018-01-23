@@ -4,7 +4,7 @@
     p &nbsp;
     ul
       li.col-md-2(v-for="link in links")
-        a(v-if='link.url' :href='link.url')
+        a(v-if='link.url' :href='link.url' target="_blank")
           h4(data-tooltip :title='link.description') {{link.name}}
           br
           img(:src="link.img" height='40px')        
