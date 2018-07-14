@@ -26,6 +26,7 @@ export default {
       links: [
         {name: 'Ovid', img: '/static/images/needleIcon.png', description: 'Online Vaccination & Immunization Databse'},
         {name: 'Sparc', img: '/static/images/cvenn.gif', description: 'Social Platform Affecting Real Connections'},
+        {name: 'UTM', img: '/static/images/utm.png', description: 'Universal Touring Machine'},
         {name: 'T4U', img: '/static/images/teacup.png', description: 'Sample Online Retail Website'},
         {name: 'LITMUS', img: '/static/images/litmus.png', description: 'Laboratory Information Management System', url: 'http://litmus-a1.herokuapp.com/'}
       ]
