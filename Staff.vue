@@ -2,7 +2,7 @@
   div.container
     hr
     div.col-md-3
-      img.photo(src='/static/images/ranguin.png')
+      img.portrait(src='/static/images/ranguin.png')
     div.col-md-1
       span &nbsp;
     div.col-md-8
@@ -24,9 +24,9 @@ export default {
 }
 </script>
 
-<style lang="sass?outputStyle=expanded">
+<style>
 
-.photo {
+.portrait {
 	padding: 20px;
 }
 /*** Customize Header / Footer Settings: ***/
